@@ -1,0 +1,52 @@
+@import '../../assets/scss/mixins';
+
+.table {
+  padding: 20px 0;
+
+  &-item {
+    width: 100%;
+    @include flex(space-between, row wrap);
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.02);
+
+    .name, .role, .status, .date {
+      width: 25%;
+      border-left: 1px solid #fff0b4;
+      border-bottom: 1px solid #fff0b4;
+      box-sizing: border-box;
+      padding: 10px 10px 10px 20px;
+    }
+
+    &:first-child {
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    & > div:first-child {
+      border-left: none;
+    }
+
+    & > div:nth-child(odd) {
+      background: rgba(255, 255, 255, 0.04);
+    }
+  }
+
+  select {
+    width: 100%;
+    border-radius: 2px;
+    padding: 5px;
+    background: rgba(0,0,0,0.2);
+    color: white;
+    border: none;
+    border-bottom: 1px solid white;
+
+    option {
+      color: black;
+    }
+  }
+}
+.statistics {
+  margin-top: 30px;
+  .item {
+    padding-right: 30px;
+  }
+}
